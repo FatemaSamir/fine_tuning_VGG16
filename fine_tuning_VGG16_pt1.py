@@ -143,10 +143,6 @@ model.fit_generator(
 model.save_weights('weights/30_epochs.h5')  # always save your weights after training or during training
 
 
-model.load_weights('weights/30_epochs.h5')
-
-
-
 #load and pre-process a new image to make predictions
 img_path = 'shrimp.jpg'
 img = image.load_img(img_path, target_size=(150, 150))
@@ -169,7 +165,7 @@ print("Probability:", prob) #print the probability
 
 
 
-#load and pre-process a new image to make predictions
+#load and pre-process another new image to make predictions
 img_path = 'mochi.jpg'
 img = image.load_img(img_path, target_size=(150, 150))
 x = image.img_to_array(img)
