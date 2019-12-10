@@ -1,10 +1,5 @@
 
-# coding: utf-8
-
-# In[63]:
-
-
-#Implementation of the tutorial:
+#Implementation of the tutorial (for learning purposes):
 #"Building powerful image classification models using very little data"
 #https://blog.keras.io/building-powerful-image-classification-models-using-very-little-data.html
 
@@ -33,14 +28,8 @@ import imageio
 import datetime
 
 
-# In[64]:
-
-
 #dimensions of the images
 img_width, img_height = 150, 150
-
-
-# In[78]:
 
 
 #weights path
@@ -55,9 +44,6 @@ epochs = 50
 batch_size = 16
 
 
-# In[4]:
-
-
 def save_bottleneck_features():
     # this is the data generator we will use for training (no augmentation)
     datagen = ImageDataGenerator(rescale=1./255)
@@ -70,8 +56,8 @@ def save_bottleneck_features():
         train_data_dir, # this is the target directory
         target_size=(img_width, img_height), # all images will be resized to 150x150
         batch_size=batch_size,
-        class_mode=None,  # this means our generator will only yield batches of data, no labels
-        shuffle=False)  # our data will be in order, so all first 1000 images will be cats, then 1000 dogs
+        class_mode=None,  
+        shuffle=False)  
     
     # the predict_generator method returns the output of a model, given
     # a generator that yields batches of numpy data
@@ -89,8 +75,8 @@ def save_bottleneck_features():
         validation_data_dir, 
         target_size=(img_width, img_height), # all images will be resized to 150x150
         batch_size=batch_size,
-        class_mode=None,  # this means our generator will only yield batches of data, no labels
-        shuffle=False)  # our data will be in order, so all first 1000 images will be cats, then 1000 dogs
+        class_mode=None,  
+        shuffle=False)  
     
     # the predict_generator method returns the output of a model, given
     # a generator that yields batches of numpy data
@@ -103,9 +89,6 @@ def save_bottleneck_features():
     np.save(open('bottleneck_features_validation.npy', 'wb'), bottleneck_features_validation)
     print("Validation bottleneck features saved", datetime.datetime.now())
     
-
-
-# In[79]:
 
 
 def train_top_model():
@@ -141,13 +124,8 @@ def train_top_model():
     return model
 
 
-# In[6]:
-
-
 save_bottleneck_features()
 
-
-# In[80]:
 
 
 train_top_model()
