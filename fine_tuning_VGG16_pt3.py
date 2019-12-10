@@ -1,7 +1,6 @@
 
-# coding: utf-8
 
-#Implementation of the tutorial:
+#Implementation of the tutorial (for learning purposes):
 #"Building powerful image classification models using very little data"
 #https://blog.keras.io/building-powerful-image-classification-models-using-very-little-data.html
 
