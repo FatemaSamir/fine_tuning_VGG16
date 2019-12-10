@@ -1,7 +1,7 @@
 # fine_tuning_VGG16
 Building a Classifier: Fine tuning VGG16 in Keras 
 
-This work is largely based on the following tutorial by Francois Chollet (many thanks!):\
+This work is an implementation (for learning purposes) of the following tutorial by Francois Chollet (many thanks!):\
 [Building powerful image classification models using very little data](https://blog.keras.io/building-powerful-image-classification-models-using-very-little-data.html)
 
 Citation for VGG16 Model used:\
