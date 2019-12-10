@@ -1,7 +1,7 @@
 # fine_tuning_VGG16
 Building a Classifier: Fine tuning VGG16 in Keras 
 
-This work is largely based on the tutorial by Francois Chollet (many thanks!):\
+This work is largely based on the following tutorial by Francois Chollet (many thanks!):\
 [Building powerful image classification models using very little data](https://blog.keras.io/building-powerful-image-classification-models-using-very-little-data.html)
 
 Citation for VGG16 Model used:\
@@ -277,7 +277,7 @@ After 30 epochs, we get a **train accuracy of 99.4%** and a **validation accurac
 
 We do achieve an improvement in the train & validation accuracy (although we have some issues, see Limitations below)
 
-And we're still predicting the correct classes:
+And we're still predicting the correct class labels, although the probability does not seem right:
 
 <p float="left">
   <img src="images/shrimp_predict_pt3.jpeg" width="300" />
@@ -295,7 +295,7 @@ We clearly have an issue with overfitting on the training data. I also suspect w
 Some debug steps I need to explore to improve the performance:
 
 * Increase the number of validation images
-* More aggressive data augmentation
+* More data augmentation
 * Add regularization to further tackle overfitting
 
 
